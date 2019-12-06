@@ -6,7 +6,17 @@ using UnityEngine.UI;
 
 public class boxCol : MonoBehaviour
 {
+
     public GameObject enemy;
+    public GameObject enemy2;
+    public GameObject enemy3;
+    public GameObject enemy4;
+
+
+    public GameObject pickup;
+    public GameObject pickup2;
+    public GameObject pickup3;
+
     public GameObject walking;
     public GameObject combat;
 
@@ -22,7 +32,48 @@ public class boxCol : MonoBehaviour
             combat.SetActive(true);
         
         }
+        if (collision.collider.gameObject == enemy2)
+        {
+            walking.SetActive(false);
+            combat.SetActive(true);
 
+        }
+        if (collision.collider.gameObject == enemy3)
+        {
+            walking.SetActive(false);
+            combat.SetActive(true);
+
+        }
+        if (collision.collider.gameObject == enemy4)
+        {
+            walking.SetActive(false);
+            combat.SetActive(true);
+
+        }
+
+        if (collision.collider.gameObject == pickup)
+        {
+          
+                Destroy(pickup);
+
+      
+        }
+
+        if (collision.collider.gameObject == pickup2)
+        {
+
+            Destroy(pickup2);
+
+
+        }
+
+        if (collision.collider.gameObject == pickup3)
+        {
+
+            Destroy(pickup3);
+
+
+        }
 
     }
 }
