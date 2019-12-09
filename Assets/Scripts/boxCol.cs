@@ -19,6 +19,8 @@ public class boxCol : MonoBehaviour
 
     public GameObject walking;
     public GameObject combat;
+    public GameObject combat2;
+    public GameObject combat3;
 
     //Any Collider2D component will call this function on
     //any attached scripts when the collider enters a collision with another collider.
@@ -30,18 +32,19 @@ public class boxCol : MonoBehaviour
         {
             walking.SetActive(false);
             combat.SetActive(true);
+            Destroy(enemy);     
         
         }
         if (collision.collider.gameObject == enemy2)
         {
             walking.SetActive(false);
-            combat.SetActive(true);
+            combat2.SetActive(true);
 
         }
         if (collision.collider.gameObject == enemy3)
         {
             walking.SetActive(false);
-            combat.SetActive(true);
+            combat3.SetActive(true);
 
         }
         if (collision.collider.gameObject == enemy4)
