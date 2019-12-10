@@ -12,6 +12,8 @@ public class boxCol : MonoBehaviour
     public GameObject enemy3;
     public GameObject enemy4;
 
+    public GameObject win;
+
 
     public GameObject pickup;
     public GameObject pickup2;
@@ -39,44 +41,24 @@ public class boxCol : MonoBehaviour
         {
             walking.SetActive(false);
             combat2.SetActive(true);
-
+            Destroy(enemy2);
         }
         if (collision.collider.gameObject == enemy3)
         {
             walking.SetActive(false);
             combat3.SetActive(true);
-
+            Destroy(enemy3);
         }
-        if (collision.collider.gameObject == enemy4)
-        {
-            walking.SetActive(false);
-            combat.SetActive(true);
+       
 
-        }
-
-        if (collision.collider.gameObject == pickup)
-        {
-          
-                Destroy(pickup);
-
-      
-        }
-
-        if (collision.collider.gameObject == pickup2)
+        if (collision.collider.gameObject == win)
         {
 
-            Destroy(pickup2);
+            SceneManager.LoadScene(2);
 
 
         }
 
-        if (collision.collider.gameObject == pickup3)
-        {
-
-            Destroy(pickup3);
-
-
-        }
 
     }
 }

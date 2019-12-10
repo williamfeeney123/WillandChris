@@ -10,6 +10,8 @@ public class BattleSystem : MonoBehaviour
 
     public GameObject walking;
     public GameObject combat;
+    public GameObject combat2;
+    public GameObject combat3;
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -92,6 +94,8 @@ public class BattleSystem : MonoBehaviour
            
             walking.SetActive(true); 
             combat.SetActive(false);
+            combat2.SetActive(false);
+            combat3.SetActive(false);
 
         }
         else if (state == BattleState.LOST)
